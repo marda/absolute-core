@@ -6,18 +6,20 @@ use Absolute\Core\Response\JsonResponse;
 
 class BaseRestPresenter extends BasePresenter
 {
-  /** @var property */
-  protected $jsonResponse;
 
-  public function startup() 
-  {
-    parent::startup();
+    /** @var property */
+    protected $jsonResponse;
 
-    $this->jsonResponse = new JsonResponse;
-  }
+    public function startup()
+    {
+        parent::startup();
 
-  public function getJsonResponse()
-  {
-    return $this->jsonResponse;
-  }
+        $this->jsonResponse = new JsonResponse;
+    }
+
+    public function getJsonResponse()
+    {
+        return $this->jsonResponse;
+    }
+
 }

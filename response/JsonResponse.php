@@ -5,36 +5,36 @@ namespace Absolute\Core\Response;
 /**
  * @property any $payload
  */
-
-class JsonResponse 
+class JsonResponse
 {
-  use \Nette\SmartObject;
 
-  private $payload;
+    use \Nette\SmartObject;
 
-	public function __construct() 
-  {
-	}
+    private $payload;
 
-  public function getPayload() 
-  {
-    return $this->payload;
-  }
+    public function __construct()
+    {
+        
+    }
 
-  // SETTERS
+    public function getPayload()
+    {
+        return $this->payload;
+    }
 
-  public function setPayload($payload) 
-  {
-    $this->payload = $payload;
-  }
+    // SETTERS
 
-  // ADDERS
+    public function setPayload($payload)
+    {
+        $this->payload = $payload;
+    }
 
-  // OTHER METHODS  
+    // ADDERS
+    // OTHER METHODS  
 
-  public function toJson() 
-  {
-    return $this->payload;
-  }
+    public function toJson()
+    {
+        return $this->payload;
+    }
+
 }
-
